@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import clg_title from "../images/clg-title.png";
+import clg_title from "../images/header.png";
 import ChristTech2K24 from "../images/ChristTech2K24.png";
 
-const ClickOnSpot = () => {
+const DebugaPalooza = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
   var count = 0;
@@ -16,6 +16,7 @@ const ClickOnSpot = () => {
         )
           .then((res) => res.text())
           .then((rep) => {
+            console.log(rep);
             const data_string = rep.substring(47).slice(0, -2);
             const raw_data = JSON.parse(data_string);
             const row_data = [];
@@ -54,6 +55,10 @@ const ClickOnSpot = () => {
           });
       } catch {}
     };
+
+    // const myTimer = setInterval(() => {
+    //   getData();
+    // }, 1000);
     getData();
 
     return () => {
@@ -70,7 +75,7 @@ const ClickOnSpot = () => {
           <img className="clg-title" src={ChristTech2K24} alt="Nil" />
         </div>
         <div>
-          <h3>CLICK ON SPOT</h3>
+          <h3>DEBUG-A-PALOOZA</h3>
         </div>
       </div>
       <table style={{ textAlign: "center" }} className="table">
@@ -87,7 +92,7 @@ const ClickOnSpot = () => {
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            if (k.Click_On_Spot) {
+            if (k.DebugaPalooza) {
               return (
                 <tr key={idx}>
                   <th scope="row">{++count}</th>
@@ -97,7 +102,7 @@ const ClickOnSpot = () => {
                   <td>
                     <Link
                       className="btn btn-primary btn-sm"
-                      to={"/details/clickonspot-" + k.Register_No}
+                      to={"/details/codedebugging-" + k.Register_No}
                     >
                       View Details
                     </Link>
@@ -117,4 +122,4 @@ const ClickOnSpot = () => {
     </>
   );
 };
-export default ClickOnSpot;
+export default DebugaPalooza;

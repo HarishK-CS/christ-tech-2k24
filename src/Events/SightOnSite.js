@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import clg_title from "../images/clg-title.png";
+import clg_title from "../images/header.png";
 import ChristTech2K24 from "../images/ChristTech2K24.png";
 
-const Memathon = () => {
+const SightOnSite = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
   var count = 0;
@@ -74,7 +74,7 @@ const Memathon = () => {
           <img className="clg-title" src={ChristTech2K24} alt="Nil" />
         </div>
         <div>
-          <h3>MEME-A-THON</h3>
+          <h3>SIGHT-ON-SITE</h3>
         </div>
       </div>
       <table style={{ textAlign: "center" }} className="table">
@@ -91,7 +91,7 @@ const Memathon = () => {
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            if (k.Meme) {
+            if (k.SightOnSite) {
               return (
                 <tr key={idx}>
                   <th scope="row">{++count}</th>
@@ -121,4 +121,4 @@ const Memathon = () => {
     </>
   );
 };
-export default Memathon;
+export default SightOnSite;

@@ -1,13 +1,14 @@
 import React from "react";
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import PaperPresentation from "./Events/PaperPresentation";
-import ClickOnSpot from "./Events/ClickOnSpot";
-import Quiz from "./Events/Quiz";
-import CodeDebugging from "./Events/CodeDebugging";
-import Memathon from "./Events/Memathon";
+import Innovata from "./Events/Innovata";
+import QuizMaster from "./Events/QuizMaster";
+import DebugaPalooza from "./Events/DebugaPalooza";
+import SightOnSite from "./Events/SightOnSite";
 import TechPuzzle from "./Events/TechPuzzle";
 import Event from "./event";
 import Details from "./details";
+import JustImagine from "./Events/JustImagine";
 
 function App() {
   return (
@@ -19,11 +20,13 @@ function App() {
           path="/paperpresentation"
           element={<PaperPresentation />}
         />
-        <Route exact path="/codedebugging" element={<CodeDebugging />} />
-        <Route exact path="/quiz" element={<Quiz />} />
-        <Route exact path="/meme" element={<Memathon />} />
+
+        <Route exact path="/debugapalooza" element={<DebugaPalooza />} />
+        <Route exact path="/quizmaster" element={<QuizMaster />} />
+        <Route exact path="/sightonsite" element={<SightOnSite />} />
         <Route exact path="/techpuzzle" element={<TechPuzzle />} />
-        <Route exact path="/clickonspot" element={<ClickOnSpot />} />
+        <Route exact path="/innovata" element={<Innovata />} />
+        <Route exact path="/justimagine" element={<JustImagine />} />
         <Route path="/details/:id" element={<Details />} />
       </Routes>
     </>

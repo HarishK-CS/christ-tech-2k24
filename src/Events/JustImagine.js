@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import clg_title from "../images/clg-title.png";
+import clg_title from "../images/header.png";
 import ChristTech2K24 from "../images/ChristTech2K24.png";
 
-const CodeDebugging = () => {
+const JustImagine = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
   var count = 0;
@@ -16,7 +16,6 @@ const CodeDebugging = () => {
         )
           .then((res) => res.text())
           .then((rep) => {
-            console.log(rep);
             const data_string = rep.substring(47).slice(0, -2);
             const raw_data = JSON.parse(data_string);
             const row_data = [];
@@ -75,7 +74,7 @@ const CodeDebugging = () => {
           <img className="clg-title" src={ChristTech2K24} alt="Nil" />
         </div>
         <div>
-          <h3>CODE DEBUGGING</h3>
+          <h3>JUST IMAGINE</h3>
         </div>
       </div>
       <table style={{ textAlign: "center" }} className="table">
@@ -92,7 +91,7 @@ const CodeDebugging = () => {
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            if (k.Code_Debugging) {
+            if (k.JustImagine) {
               return (
                 <tr key={idx}>
                   <th scope="row">{++count}</th>
@@ -102,7 +101,7 @@ const CodeDebugging = () => {
                   <td>
                     <Link
                       className="btn btn-primary btn-sm"
-                      to={"/details/codedebugging-" + k.Register_No}
+                      to={"/details/meme-" + k.Register_No}
                     >
                       View Details
                     </Link>
@@ -122,4 +121,4 @@ const CodeDebugging = () => {
     </>
   );
 };
-export default CodeDebugging;
+export default JustImagine;

@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import clg_title from "./images/clg-title.png";
+import clg_title from "./images/header.png";
 import ChristTech2K24 from "./images/ChristTech2K24.png";
 import pp from "./images/paper.png";
 import quiz from "./images/quiz.jpg";
 import techpuzzle from "./images/techpuzzle.png";
 import innovata from "./images/photo.png";
 import codedebugging from "./images/code.png";
-import memeathon from "./images/meme.png";
+import justimagine from "./images/justimagine.png";
+import sightonsight from "./images/sight.png";
 import Image from "react-bootstrap/Image";
-import { CCard, CCardImage, CCardBody, CFooter, CLink } from "@coreui/react";
+import { CCard, CCardImage, CCardBody } from "@coreui/react";
 import "./event.css";
 
 const Event = () => {
@@ -26,7 +27,7 @@ const Event = () => {
 
         <div className="img-wrapper">
           <div className="img-panel">
-            <CCard style={{ width: "18rem", height: "12rem" }}>
+            <CCard style={{ width: "18rem", height: "16rem" }}>
               <Link to={"/paperpresentation"} className="img-link">
                 <CCardImage src={pp} className="event-img shadow " />
               </Link>
@@ -40,32 +41,32 @@ const Event = () => {
               </CCardBody>
             </CCard>
           </div>
+
           <div className="img-panel">
-            <CCard style={{ width: "18rem", height: "12rem" }}>
-              <Link to={"/paperpresentation"} className="img-link">
+            <CCard style={{ width: "18rem", height: "16rem" }}>
+              <Link to={"/debugapalooza"} className="img-link">
                 <Image
                   src={codedebugging}
                   style={{ objectFit: "fill" }}
                   className="event-img shadow"
-                  thumbnail
                 />
                 {/* <CCardImage src={codedebugging} className="event-img shadow" /> */}
               </Link>
               <CCardBody>
                 <div className="text" style={{ marginTop: "0" }}>
-                  <h5 style={{ textDecoration: "None" }}>Code Debugging</h5>
+                  <h5 style={{ textDecoration: "None" }}>Debug-a-Palooza</h5>
                 </div>
               </CCardBody>
             </CCard>
           </div>
+
           <div className="img-panel">
-            <CCard style={{ width: "18rem", height: "12rem" }}>
-              <Link to={"/paperpresentation"} className="img-link">
+            <CCard style={{ width: "18rem", height: "16rem" }}>
+              <Link to={"/techpuzzle"} className="img-link">
                 <img
                   src={techpuzzle}
                   height="80%"
                   className="event-img shadow"
-                  thumbnail
                 />
               </Link>
               <CCardBody>
@@ -75,32 +76,32 @@ const Event = () => {
               </CCardBody>
             </CCard>
           </div>
+
           <div className="img-panel">
-            <CCard style={{ width: "18rem", height: "12rem" }}>
-              <Link to={"/clickonspot"} className="img-link">
+            <CCard style={{ width: "18rem", height: "16rem" }}>
+              <Link to={"/innovata"} className="img-link">
                 <img
                   src={innovata}
                   height="80%"
                   style={{ objectFit: "fit", marginTop: "5%" }}
                   className="event-img shadow"
-                  thumbnail
                 />
               </Link>
               <CCardBody>
                 <div className="text" style={{ marginTop: "0" }}>
-                  <h5 style={{ textDecoration: "None" }}>Click On Spot</h5>
+                  <h5 style={{ textDecoration: "None" }}>Innovata</h5>
                 </div>
               </CCardBody>
             </CCard>
           </div>
+
           <div className="img-panel">
-            <CCard style={{ width: "18rem", height: "12rem" }}>
-              <Link to={"/quiz"} className="img-link">
+            <CCard style={{ width: "18rem", height: "16rem" }}>
+              <Link to={"/quizmaster"} className="img-link">
                 <Image
                   src={quiz}
                   style={{ objectFit: "fill" }}
                   className="event-img shadow"
-                  thumbnail
                 />
                 {/* <CCardImage
                   orientation="top"
@@ -115,20 +116,38 @@ const Event = () => {
               </CCardBody>
             </CCard>
           </div>
+
           <div className="img-panel">
-            <CCard style={{ width: "18rem", height: "12rem" }}>
-              <Link to={"/meme"} className="img-link">
+            <CCard style={{ width: "18rem", height: "16rem" }}>
+              <Link to={"/sightonsite"} className="img-link">
                 <img
-                  src={memeathon}
-                  height="80%"
-                  style={{ marginTop: "5%" }}
+                  src={sightonsight}
+                  height="75%"
+                  style={{ marginTop: "1%" }}
                   className="event-img shadow"
-                  thumbnail
                 />
               </Link>
               <CCardBody>
                 <div className="text" style={{ marginTop: "0" }}>
-                  <h5 style={{ textDecoration: "None" }}>Meme-A-Thon</h5>
+                  <h5 style={{ textDecoration: "None" }}>Sight-On-Site</h5>
+                </div>
+              </CCardBody>
+            </CCard>
+          </div>
+
+          <div className="img-panel">
+            <CCard style={{ width: "18rem", height: "16rem" }}>
+              <Link to={"/justimagine"} className="img-link">
+                <img
+                  src={justimagine}
+                  height="80%"
+                  style={{ marginTop: "5%" }}
+                  className="event-img shadow"
+                />
+              </Link>
+              <CCardBody>
+                <div className="text" style={{ marginTop: "0" }}>
+                  <h5 style={{ textDecoration: "None" }}>Just Imagine</h5>
                 </div>
               </CCardBody>
             </CCard>

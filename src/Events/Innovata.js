@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import clg_title from "../images/clg-title.png";
+import clg_title from "../images/header.png";
 import ChristTech2K24 from "../images/ChristTech2K24.png";
 
-const Quiz = () => {
+const Innovata = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
   var count = 0;
@@ -54,10 +54,6 @@ const Quiz = () => {
           });
       } catch {}
     };
-
-    // const myTimer = setInterval(() => {
-    //   getData();
-    // }, 1000);
     getData();
 
     return () => {
@@ -74,7 +70,7 @@ const Quiz = () => {
           <img className="clg-title" src={ChristTech2K24} alt="Nil" />
         </div>
         <div>
-          <h3>QUIZE MASTER</h3>
+          <h3>INNOVATA</h3>
         </div>
       </div>
       <table style={{ textAlign: "center" }} className="table">
@@ -91,7 +87,7 @@ const Quiz = () => {
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            if (k.Quiz) {
+            if (k.Innovata) {
               return (
                 <tr key={idx}>
                   <th scope="row">{++count}</th>
@@ -101,7 +97,7 @@ const Quiz = () => {
                   <td>
                     <Link
                       className="btn btn-primary btn-sm"
-                      to={"/details/quiz-" + k.Register_No}
+                      to={"/details/clickonspot-" + k.Register_No}
                     >
                       View Details
                     </Link>
@@ -121,4 +117,4 @@ const Quiz = () => {
     </>
   );
 };
-export default Quiz;
+export default Innovata;

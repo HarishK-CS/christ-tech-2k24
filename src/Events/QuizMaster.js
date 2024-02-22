@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import clg_title from "../images/header.png";
 import ChristTech2K24 from "../images/ChristTech2K24.png";
 
-const PaperPresentation = () => {
+const QuizMaster = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
   var count = 0;
@@ -74,7 +74,7 @@ const PaperPresentation = () => {
           <img className="clg-title" src={ChristTech2K24} alt="Nil" />
         </div>
         <div>
-          <h3>PAPER PRESENTATION</h3>
+          <h3>QUIZE MASTER</h3>
         </div>
       </div>
       <table style={{ textAlign: "center" }} className="table">
@@ -91,7 +91,7 @@ const PaperPresentation = () => {
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            if (k.Paper_Presentation && k.Name !== "") {
+            if (k.QuizMaster) {
               return (
                 <tr key={idx}>
                   <th scope="row">{++count}</th>
@@ -101,7 +101,7 @@ const PaperPresentation = () => {
                   <td>
                     <Link
                       className="btn btn-primary btn-sm"
-                      to={"/details/paperpresentation-" + k.Register_No}
+                      to={"/details/quiz-" + k.Register_No}
                     >
                       View Details
                     </Link>
@@ -121,4 +121,4 @@ const PaperPresentation = () => {
     </>
   );
 };
-export default PaperPresentation;
+export default QuizMaster;

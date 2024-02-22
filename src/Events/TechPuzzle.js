@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import clg_title from "../images/clg-title.png";
+import clg_title from "../images/header.png";
 import ChristTech2K24 from "../images/ChristTech2K24.png";
 
-const TestYourMemory = () => {
+const TechPuzzle = () => {
   const [header, setHeader] = useState([]);
   const [alldata, setAllData] = useState([]);
   var count = 0;
@@ -74,7 +74,7 @@ const TestYourMemory = () => {
           <img className="clg-title" src={ChristTech2K24} alt="Nil" />
         </div>
         <div>
-          <h3>TEST YOUR MEMORY</h3>
+          <h3>TECH PUZZLE</h3>
         </div>
       </div>
       <table style={{ textAlign: "center" }} className="table">
@@ -91,7 +91,7 @@ const TestYourMemory = () => {
         </thead>
         <tbody>
           {alldata.map((k, idx) => {
-            if (k.Test_Your_Memory) {
+            if (k.TechPuzzle) {
               return (
                 <tr key={idx}>
                   <th scope="row">{++count}</th>
@@ -121,4 +121,4 @@ const TestYourMemory = () => {
     </>
   );
 };
-export default TestYourMemory;
+export default TechPuzzle;
